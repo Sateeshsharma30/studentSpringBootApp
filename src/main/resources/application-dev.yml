@@ -8,3 +8,4 @@ spring:
       platform: h2
       mode: always
       continue-on-error: true
+      
