@@ -4,19 +4,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class UserModel {
+public class User {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	public UserModel() {
+	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public UserModel(String name, String email) {
+	public User(String name, String email) {
 		super();
 		this.name = name;
 		this.email = email;

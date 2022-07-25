@@ -18,7 +18,7 @@ public class UserController {
 		
 		m.addAttribute("result", "Successfully Update");
 		
-		usd.save(new UserModel(name,email));
+		usd.save(new User(name,email));
 		return "userAddResult";
 		
 	}
