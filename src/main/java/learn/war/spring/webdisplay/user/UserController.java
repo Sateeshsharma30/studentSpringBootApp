@@ -23,7 +23,7 @@ public class UserController {
 		if (name != null && name.trim().length() > 0 && name.trim().length() <= 15 && email != null
 				&& email.trim().length() >0) {
 			
-			m.addAttribute("result", "Successfully Update");
+			m.addAttribute("result", "Successfully Created");
 
 		} else {
 			m.addAttribute("result", "Invalid User name or Email ");
