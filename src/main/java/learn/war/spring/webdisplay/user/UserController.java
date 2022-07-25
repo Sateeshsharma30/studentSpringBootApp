@@ -18,8 +18,17 @@ public class UserController {
 	
 	@RequestMapping(path = "/userweb", method = RequestMethod.POST)
 	public String createUser(Model m,@RequestParam String name,@RequestParam String email) {
+	
 		
-		m.addAttribute("result", "Successfully Update");
+		if (name != null && name.trim().length() > 0 && name.trim().length() <= 15 && email != null
+				&& email.trim().length() >0) {
+			
+			m.addAttribute("result", "Successfully Update");
+
+		} else {
+			m.addAttribute("result", "Invalid User name or password ");
+
+		}
 		
 		usd.save(new Users(name,email));
 		return "userAddResult";
