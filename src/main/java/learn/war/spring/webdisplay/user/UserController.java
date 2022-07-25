@@ -26,7 +26,7 @@ public class UserController {
 			m.addAttribute("result", "Successfully Update");
 
 		} else {
-			m.addAttribute("result", "Invalid User name or password ");
+			m.addAttribute("result", "Invalid User name or Email ");
 
 		}
 		
