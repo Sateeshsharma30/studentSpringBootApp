@@ -7,17 +7,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-public class User {
+public class Users {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	public User() {
+	public Users() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public User(String name, String email) {
+	public Users(String name, String email) {
 		super();
 		this.name = name;
 		this.email = email;
