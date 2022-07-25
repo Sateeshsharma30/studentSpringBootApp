@@ -1,5 +1,6 @@
 package learn.war.spring.webdisplay.user;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,6 +23,7 @@ public class Users {
 		this.name = name;
 		this.email = email;
 	}
+	@Column(unique = true)
 	private String name;
 	private String email;
 	public int getId() {
