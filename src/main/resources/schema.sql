@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS Users(
+CREATE TABLE users(
   name  VARCHAR(150),
   email   VARCHAR(150),
   id       number ,
