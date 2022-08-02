@@ -14,7 +14,7 @@ public class Amount {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	private int userid;
+	private String name;
 	private String type;
 	private int amount;
 	private Date date;
@@ -22,18 +22,18 @@ public class Amount {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Amount(int userid, String type, int amount, Date date) {
+	public Amount(String name, String type, int amount, Date date) {
 		super();
-		this.userid = userid;
+		this.name = name;
 		this.type = type;
 		this.amount = amount;
 		this.date = date;
 	}
-	public int getUserid() {
-		return userid;
+	public String getName() {
+		return name;
 	}
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getType() {
 		return type;
@@ -53,5 +53,16 @@ public class Amount {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	@Override
+	public String toString() {
+		return "Amount [id=" + id + ", name=" + name + ", type=" + type + ", amount=" + amount + ", date=" + date + "]";
+	}
+	
 	
 }
