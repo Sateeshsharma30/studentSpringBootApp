@@ -38,11 +38,17 @@ import learn.war.spring.webdisplay.user.Users;
 		return "userAddResult";
 	}
 
-	@RequestMapping(path = "/getAllUser", produces = "application/json")
+	@RequestMapping(path = "/getAllUsers", produces = "application/json")
 	@ResponseBody
 	public List<BudgetPlanner> getAllUser(Model m) {
 		return bds.getAll();
 
 	}
+	
+	@RequestMapping(path = "/getAllUsers", produces = "application/json")
+	@ResponseBody
+	public List<BudgetPlanner> getAllUsers(Model m) {
+		return bds.getAll();
 
+}
 }
