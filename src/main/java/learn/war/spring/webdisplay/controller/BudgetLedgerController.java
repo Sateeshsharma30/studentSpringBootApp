@@ -23,12 +23,12 @@ public class BudgetLedgerController {
 	private BudgetService service;
 	
 	@RequestMapping(path = "/ledgerbudget", method = RequestMethod.POST)
-	public String usercreate(Model m, @RequestParam int userid, @RequestParam String type,
+	public String usercreate(Model m, @RequestParam String name, @RequestParam String type,
 			@RequestParam Integer amount, @RequestParam Date date) {
 		
-		service.saves(new Amount(userid,type,amount,date));
+		service.saves(new Amount(name,type,amount,date));
 
-		if ( amount != null && date != null && type != null) {
+		if ( name != null && name.trim().length() > 0 && name.trim().length() <= 15 && amount != null && date != null && type != null) {
 
 			m.addAttribute("result", "Successfully Created");
 
