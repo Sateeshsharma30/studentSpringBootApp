@@ -19,7 +19,7 @@ public class UserService {
 
 	}
 
-	List<Users> getAll() {
+	public List<Users> getAll() {
 		List<Users> lst = new ArrayList<Users>();
 		repo.findAll().forEach(x -> lst.add(x));
 		return lst;
