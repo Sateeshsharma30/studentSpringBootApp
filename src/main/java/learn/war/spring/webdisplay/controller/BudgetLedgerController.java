@@ -16,7 +16,7 @@ import learn.war.spring.webdisplay.budget.BudgetService;
 import learn.war.spring.webdisplay.budgetLedger.Amount;
 
 @Controller
-@RequestMapping("/budget")
+@RequestMapping("/Amounts")
 public class BudgetLedgerController {
 	
 	@Autowired
@@ -37,10 +37,11 @@ public class BudgetLedgerController {
 
 		}
 		return "userAddResult";
+	
+}
 
-
-	}
-
+	
+	
 	
 	
 }
