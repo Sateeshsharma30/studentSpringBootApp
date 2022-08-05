@@ -45,10 +45,5 @@ import learn.war.spring.webdisplay.user.Users;
 
 	}
 	
-	@RequestMapping(path = "/getAllUsers", produces = "application/json")
-	@ResponseBody
-	public List<BudgetPlanner> getAllUsers(Model m) {
-		return bds.getAll();
 
-}
 }
